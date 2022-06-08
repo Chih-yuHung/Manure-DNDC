@@ -13,7 +13,7 @@ sin.alpha<-pmax((cos(deg2rad(L))*cos(deg2rad(declination.s))
           *sin(deg2rad(declination.s))),0)                   # sunlight degree, F102:KG102
 
 #This's a part to calculate shadow area due to the tank wall, it's not in Rennie, 2017
-source("R/without cover/6.1 shade effect.R",echo=F)
+source("6.1 shade effect.R",echo=F)
 ###End for shadow calculation
 
 m<-ifelse(sin.alpha>0,Pa/(101325*sin.alpha),0)       # Optical air mass number, #F103-KG103
