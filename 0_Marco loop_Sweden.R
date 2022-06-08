@@ -1,5 +1,5 @@
 library(REdaS); library(xlsx); library(beepr) ;library(dplyr); library(imputeTS)
-setwd("C:/Users/hungc/OneDrive - AGR-AGR/AAFC/Project 3_Sweden/2. Method/")
+setwd("C:/Users/hungc/OneDrive - AGR-AGR/AAFC/Project 6_manure DNDC/R for DNDC/")
 #Set location, initial date and end time; date origin in R, 1970-1-1
 Location<-"Arlanda"
 start.date<-"2020-6-18"  
@@ -13,6 +13,7 @@ removal.end<-as.numeric(as.Date(c("2020-10-22","2021-5-27"
                                   ,"2020-10-22","2021-5-27"
                                   ,"2021-10-22","2022-5-27"
                                   ,"2022-10-22","2023-5-27"),by="days"))
+
 removal.day<-unique(removal.end-removal.dates)
 removal.duration<-list()
     for (i in 3:8){
